@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🌐 Интернет</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+<div class="container nav">
+    <div class="logo">🌐 NetTech</div>
+
+    <ul id="menu">
+        <li><a href="#about">О сети</a></li>
+        <li><a href="#how">Как работает</a></li>
+        <li><a href="#calc">Калькулятор</a></li>
+        <li><a href="#quiz">Тест</a></li>
+        <li><a href="#gallery">Галерея</a></li>
+    </ul>
+
+    <div>
+        <button id="theme">🌙</button>
+        <button id="burger">☰</button>
+    </div>
+</div>
+</header>
+
+<section id="hero">
+    <h1>Как работает интернет</h1>
+    <p>Пакеты, маршруты и облака</p>
+    <button onclick="go('calc')">Начать</button>
+</section>
+
+<section id="about" class="block">
+    <h2>Что такое интернет</h2>
+    <p>Это глобальная сеть, где устройства обмениваются пакетами данных.Интернет — это всемирная система, объединяющая сети компьютеров по всей планете. Он помогает разным устройствам передавать друг другу различную информацию. По сути, интернет работает по тому же принципу, что система транспортных путей, простирающихся через разные города и страны. Как и в этой системе, информация передаётся по «дорогам» Всемирной сети благодаря протоколам и сетевому оборудованию.</p>
+</section>
+<canvas id="chart" width="400" height="200"></canvas>
+
+<section id="how" class="block">
+    <h2>Передача данных</h2>
+    <div class="line">
+        <div class="packet"></div>
+    </div>
+    <p>Пакеты идут через роутеры к получателю.</p>
+</section>
+
+<canvas id="networkCanvas" width="500" height="200"></canvas>
+<section id="calc" class="block">
+    <h2>Калькулятор загрузки</h2>
+
+    <input id="size" placeholder="Размер файла (МБ)">
+    <input id="speed" placeholder="Скорость (Мбит/с)">
+    <button onclick="calc()">Рассчитать</button>
+
+    <div id="calcResult"></div>
+</section>
+
+<section id="quiz" class="block">
+    <h2>Тест</h2>
+    <div id="q"></div>
+    <div id="a"></div>
+    <div id="res"></div>
+</section>
+
+<section id="gallery" class="block">
+    <h2>Галерея</h2>
+
+    <div class="cards">
+        <img src="images/126.jpg" onclick="openModal(this.src)">
+        <img src="images/127.jpg" onclick="openModal(this.src)">
+        <img src="images/128.jpg" onclick="openModal(this.src)">
+    </div>
+</section>
+
+<div id="modal" onclick="closeModal()">
+    <img id="modalImg">
+</div>
+
+<footer>
+<p>© 2026 IT Project</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
